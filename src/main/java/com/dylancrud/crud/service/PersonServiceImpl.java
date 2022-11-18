@@ -1,14 +1,24 @@
-package Service;
+package com.dylancrud.crud.service;
 
-import entity.Person;
-import repository.PersonRepository;
+
+import com.dylancrud.crud.entity.Person;
+import com.dylancrud.crud.repository.PersonRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
 
+@Service
 public class PersonServiceImpl implements PersonService{
 
     private PersonRepository personRepository;
+
+    @Autowired
+    public PersonServiceImpl(PersonRepository personRepository) {
+        this.personRepository = personRepository;
+    }
+
     @Override
     public Person savePerson(Person person) {
         return personRepository.save(person);

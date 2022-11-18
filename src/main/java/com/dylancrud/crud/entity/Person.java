@@ -1,10 +1,9 @@
-package entity;
+package com.dylancrud.crud.entity;
 
 import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.util.UUID;
 
 @Entity
 @Builder
@@ -16,7 +15,7 @@ import java.util.UUID;
 @AllArgsConstructor
 public class Person {
     @Id
-    private UUID id;
+    private Long id;
     private String name;
     private String email;
 }

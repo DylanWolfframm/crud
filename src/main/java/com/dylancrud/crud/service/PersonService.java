@@ -1,6 +1,8 @@
-package Service;
+package com.dylancrud.crud.service;
 
-import entity.Person;
+
+
+import com.dylancrud.crud.entity.Person;
 
 import java.util.List;
 
